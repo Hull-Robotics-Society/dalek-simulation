@@ -15,10 +15,14 @@
     <rosparam command="load"
               file="$(find dalek)/config/diffdrive.yaml"
               ns="dalek_diff_drive_controller" />
+    <rosparam command="load"
+              file="$(find dalek)/config/head.yaml"
+              ns="dalek_head_controller" />
   
     <node name="dalek_controller_spawner" pkg="controller_manager" type="spawner"
       args="dalek_joint_state_controller
             dalek_diff_drive_controller
+            dalek_head_controller
             --shutdown-timeout 3"/>
   
     <node name="rqt_robot_steering" pkg="rqt_robot_steering" type="rqt_robot_steering">
