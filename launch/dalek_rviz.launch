@@ -3,7 +3,7 @@
 
     <arg name="model" default="$(find dalek-simulation)/urdf/dalek.urdf"/>
     <arg name="gui" default="true" />
-    <arg name="rvizconfig" default="$(find dalek-simulationdalek)/rviz/urdf.rviz "/>
+    <arg name="rvizconfig" default="$(find dalek-simulation)/rviz/urdf.rviz "/>
 
     <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
 
